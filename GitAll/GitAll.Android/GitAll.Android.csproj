@@ -133,9 +133,9 @@
     <AndroidResource Include="Resources\values\styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GitAll\GitAll.Views.csproj">
-      <Project>{3DFA507E-E994-4EE4-A9EA-81683579C7BF}</Project>
-      <Name>GitAll.Views</Name>
+    <ProjectReference Include="..\GitAll\GitAll.Forms.csproj">
+      <Project>{3dfa507e-e994-4ee4-a9ea-81683579c7bf}</Project>
+      <Name>GitAll.Forms</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
