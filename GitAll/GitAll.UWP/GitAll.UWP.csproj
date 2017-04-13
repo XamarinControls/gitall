@@ -152,9 +152,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GitAll\GitAll.Views.csproj">
+    <ProjectReference Include="..\GitAll\GitAll.Forms.csproj">
       <Project>{3DFA507E-E994-4EE4-A9EA-81683579C7BF}</Project>
-      <Name>GitAll.Views</Name>
+      <Name>GitAll.Forms</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

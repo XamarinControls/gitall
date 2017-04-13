@@ -39,6 +39,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\MyDependencyService.cs" />
     <Compile Include="Views\Base\BaseView.cs" />
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
@@ -68,12 +69,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\GitAll.Core\GitAll.Core.csproj">
+    <ProjectReference Include="..\GitAll.Core\GitAll.Core.csproj">
       <Project>{c99c91b6-23da-4f5b-8fb9-68897091a32a}</Project>
       <Name>GitAll.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Views\MainView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
