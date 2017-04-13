@@ -1,23 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitAll.Android", "GitAll\GitAll.Android\GitAll.Android.csproj", "{84CFAAB7-C458-4C21-993A-56F0ADF7CAF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitAll.Views", "GitAll\GitAll\GitAll.Views.csproj", "{3DFA507E-E994-4EE4-A9EA-81683579C7BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitAll.Forms", "GitAll\GitAll\GitAll.Forms.csproj", "{3DFA507E-E994-4EE4-A9EA-81683579C7BF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitAll.UWP", "GitAll\GitAll.UWP\GitAll.UWP.csproj", "{BC85B422-31E2-4E34-9A0F-C1C9C9A3B407}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitAll.iOS", "GitAll\GitAll.iOS\GitAll.iOS.csproj", "{D8EA6C15-D0C0-450C-A3AB-0DF2EEBD98D0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitAll.Core", "GitAll.Core\GitAll.Core.csproj", "{C99C91B6-23DA-4F5B-8FB9-68897091A32A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1_Shared", "1_Shared", "{ED84EAC7-DC90-461F-AF30-4E09F534432B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2_Platform", "2_Platform", "{6C5A8280-E08D-4AD1-B68F-048D1AF07408}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0_Documentation", "0_Documentation", "{DB1583A1-893D-4C95-BCF0-9AAD55B838D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitAll.Core", "GitAll\GitAll.Core\GitAll.Core.csproj", "{C99C91B6-23DA-4F5B-8FB9-68897091A32A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
