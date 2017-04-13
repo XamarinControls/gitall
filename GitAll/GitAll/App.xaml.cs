@@ -1,19 +1,22 @@
-﻿using System;
+﻿using GitAll.Forms.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
-namespace GitAll
+namespace GitAll.Forms
 {
+    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class App : Application
     {
         public App()
         {
             InitializeComponent();
 
-            MainPage = new GitAll.MainPage();
+            MainPage = new NavigationPage(new MainView());
         }
 
         protected override void OnStart()

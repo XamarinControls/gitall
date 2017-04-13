@@ -4,5 +4,5 @@
              xmlns:views="clr-namespace:GitAll.Forms.Views.Base"
              x:Class="GitAll.Forms.Views.MainView"
              Title="MainView">
-  
+    
 </views:BaseView>

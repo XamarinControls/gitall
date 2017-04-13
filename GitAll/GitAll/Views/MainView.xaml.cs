@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GitAll.Forms.Views.Base;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -12,43 +13,12 @@ using Xamarin.Forms.Xaml;
 
 namespace GitAll.Forms.Views
 {
-
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainView : ContentPage
+    
+    public partial class MainView : BaseView
     {
         public MainView()
         {
-            InitializeComponent();
-            BindingContext = new ContentPageViewModel();
+            InitializeComponent();            
         }
-    }
-
-    class MainViewViewModel : INotifyPropertyChanged
-    {
-
-        public MainViewViewModel()
-        {
-            IncreaseCountCommand = new Command(IncreaseCount);
-        }
-
-        int count;
-
-        string countDisplay = "You clicked 0 times.";
-        public string CountDisplay
-        {
-            get { return countDisplay; }
-            set { countDisplay = value; OnPropertyChanged(); }
-        }
-
-        public ICommand IncreaseCountCommand { get; }
-
-        void IncreaseCount() =>
-            CountDisplay = $"You clicked {++count} times";
-
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        void OnPropertyChanged([CallerMemberName]string propertyName = "") =>
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
-    }
+    }   
 }
