@@ -28,6 +28,16 @@ namespace GitAll.Core.ViewModels.Base
             RaisePropertyChanged(property);
             return true;
         }
-        
+
+        public virtual void OnResume()
+        {
+
+        }
+
+        public virtual void OnPause()
+        {
+
+        }
+                
     }
 }
