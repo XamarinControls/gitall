@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitAll.Android", "GitAll\GitAll.Android\GitAll.Android.csproj", "{84CFAAB7-C458-4C21-993A-56F0ADF7CAF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitAll.Droid", "GitAll\GitAll.Android\GitAll.Droid.csproj", "{84CFAAB7-C458-4C21-993A-56F0ADF7CAF1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitAll.Forms", "GitAll\GitAll\GitAll.Forms.csproj", "{3DFA507E-E994-4EE4-A9EA-81683579C7BF}"
 EndProject
