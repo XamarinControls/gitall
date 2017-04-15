@@ -35,18 +35,33 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CoreApp.cs" />
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Model\MasterItemDetail.cs" />
+    <Compile Include="Model\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AccountService.cs" />
+    <Compile Include="Services\AppSettings.cs" />
+    <Compile Include="Services\Interfaces\IAccountService.cs" />
+    <Compile Include="Services\Interfaces\IAppSettings.cs" />
     <Compile Include="Services\Interfaces\IDependencyService.cs" />
-    <Compile Include="Translations\Utils\Extensions.cs" />
-    <Compile Include="Translations\Utils\I18N.cs" />
-    <Compile Include="Translations\Utils\II18N.cs" />
-    <Compile Include="Translations\Utils\PortableLanguage.cs" />
+    <Compile Include="Locales\Utils\Extensions.cs" />
+    <Compile Include="Locales\Utils\I18N.cs" />
+    <Compile Include="Locales\Utils\II18N.cs" />
+    <Compile Include="Locales\Utils\PortableLanguage.cs" />
+    <Compile Include="Services\Interfaces\IMasterDetailMenuService.cs" />
+    <Compile Include="Services\Interfaces\IRepositoryService.cs" />
+    <Compile Include="Services\MasterDetailMenuService.cs" />
+    <Compile Include="Services\RepositoryService.cs" />
+    <Compile Include="Utils\ExtensionMethods.cs" />
+    <Compile Include="ViewModels\ActivityViewModel.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\MasterViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Translations\en.txt" />
+    <EmbeddedResource Include="Locales\en.txt" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

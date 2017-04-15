@@ -2,6 +2,7 @@
 using GitAll.Core.Services.Interfaces;
 using GitAll.Core.I18NPortable;
 using System.Diagnostics;
+using GitAll.Core.Services;
 
 namespace GitAll.Core
 {
@@ -13,6 +14,11 @@ namespace GitAll.Core
         public void Init(IDependencyService dependencyService)
         {
             _dependencyService = dependencyService;
+
+            Register<MasterDetailMenuService>();
+            Register<AppSettings>();
+            Register<AccountService>();
+            Register<RepositoryService>();
 
             I18N.Current
                 .SetNotFoundSymbol("$")
