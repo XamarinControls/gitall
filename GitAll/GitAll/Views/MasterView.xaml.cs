@@ -10,16 +10,7 @@ namespace GitAll.Forms.Views
         public MasterView()
         {
             InitializeComponent();
-            BindingContext = new MasterViewModel();
-            
-            
-
-
-        }
-
-        private void ClickButton(object sender, EventArgs e)
-        {
-            
+            BindingContext = new MasterViewModel();                        
         }
     }
 }

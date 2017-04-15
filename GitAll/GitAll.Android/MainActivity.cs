@@ -22,7 +22,12 @@ namespace GitAll.Droid
 
             base.OnCreate(bundle);
 
+            Plugin.Iconize.Iconize.With(new Plugin.Iconize.Fonts.FontAwesomeModule());
+
             global::Xamarin.Forms.Forms.Init(this, bundle);
+
+            FormsPlugin.Iconize.Droid.IconControls.Init(Resource.Id.toolbar, Resource.Id.tabMode);
+            
             LoadApplication(new App());            
         }
     }

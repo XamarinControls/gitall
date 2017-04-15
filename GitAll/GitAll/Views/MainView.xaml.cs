@@ -11,6 +11,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Globalization;
+using GitAll.Core.ViewModels;
 
 namespace GitAll.Forms.Views
 {
@@ -20,6 +21,7 @@ namespace GitAll.Forms.Views
         public MainView()
         {
             InitializeComponent();
+            BindingContext = new MainViewModel();
 
             Master = new MasterView();
             Detail = new ActivityView();                        

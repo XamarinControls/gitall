@@ -1,26 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <views:BaseView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:views="clr-namespace:GitAll.Forms.Views.Base"
+             xmlns:views="clr-namespace:GitAll.Forms.Views.Base"                
+             xmlns:ic="clr-namespace:FormsPlugin.Iconize;assembly=FormsPlugin.Iconize"
              xmlns:controls="clr-namespace:GitAll.Forms.Controls"
              x:Class="GitAll.Forms.Views.MasterView"
                 Title="MasterView">
 
-    <StackLayout VerticalOptions="FillAndExpand">
+    <StackLayout VerticalOptions="FillAndExpand" Padding="16,0,0,0">
+
 
         <!--Account-->
         <!--TODO: Move to ContentView to reuse-->
         <StackLayout Orientation="Horizontal">
             <!--TODO: Round this image-->
-            <Image ImageSource="{Binding AccountImage}"/>
+            <ic:IconImage Icon="fa-500px" HeightRequest="20" IconColor="Blue"/>
             <controls:BindablePicker ItemsSource="{Binding AccountList}" SelectedItem="{Binding AccountSelected}"/>
         </StackLayout>
 
         <!--Repository-->
         <StackLayout Orientation="Horizontal">
-            <Image ImageSource="{Binding RepositoryImage}"/>
+            <ic:IconImage IconSize="20" WidthRequest="20" HeightRequest="20" Icon="fa-code-fork" IconColor="Black"/>
             <controls:BindablePicker ItemsSource="{Binding RepositoryList}" SelectedItem="{Binding RepositorySelected}"/>
         </StackLayout>
+
 
         <ListView VerticalOptions="FillAndExpand" ItemsSource="{Binding Items}">
             <ListView.ItemTemplate>
