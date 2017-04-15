@@ -7,6 +7,8 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using GitAll.Forms;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
 
 namespace GitAll.Droid
 {
@@ -21,8 +23,10 @@ namespace GitAll.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
+            LoadApplication(new App());            
         }
     }
+
+    
 }
 
