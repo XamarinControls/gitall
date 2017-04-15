@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:BaseView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:GitAll.Forms.Views.Base"
+             xmlns:controls="clr-namespace:GitAll.Forms.Controls"
+             x:Class="GitAll.Forms.Views.MasterView"
+                Title="MasterView">
+
+    <StackLayout VerticalOptions="FillAndExpand">
+
+        <!--Account-->
+        <!--TODO: Move to ContentView to reuse-->
+        <StackLayout Orientation="Horizontal">
+            <!--TODO: Round this image-->
+            <Image ImageSource="{Binding AccountImage}"/>
+            <controls:BindablePicker ItemsSource="{Binding AccountList}" SelectedItem="{Binding AccountSelected}"/>
+        </StackLayout>
+
+        <!--Repository-->
+        <StackLayout Orientation="Horizontal">
+            <Image ImageSource="{Binding RepositoryImage}"/>
+            <controls:BindablePicker ItemsSource="{Binding RepositoryList}" SelectedItem="{Binding RepositorySelected}"/>
+        </StackLayout>
+
+        <ListView VerticalOptions="FillAndExpand" ItemsSource="{Binding Items}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding Title}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</views:BaseView>

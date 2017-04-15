@@ -10,15 +10,21 @@ using System.Windows.Input;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Globalization;
 
 namespace GitAll.Forms.Views
 {
     
-    public partial class MainView : BaseView
+    public partial class MainView : MasterDetailPage
     {
         public MainView()
         {
-            InitializeComponent();            
+            InitializeComponent();
+
+            Master = new MasterView();
+            Detail = new ActivityView();                        
         }
-    }   
+    }
+
+  
 }
