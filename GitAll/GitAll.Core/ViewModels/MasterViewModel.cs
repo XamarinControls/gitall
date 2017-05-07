@@ -3,6 +3,7 @@ using GitAll.Core.Services;
 using GitAll.Core.Utils;
 using GitAll.Core.ViewModels.Base;
 using System.Collections.ObjectModel;
+using System.Windows.Input;
 
 namespace GitAll.Core.ViewModels
 {
@@ -27,7 +28,24 @@ namespace GitAll.Core.ViewModels
             get { return _items; }
             set { SetProperty(ref _items, value); }
         }
-     
+
+        private MasterItemDetail _itemSelected;
+
+
+        public MasterItemDetail ItemSelected
+        {
+            get { return _itemSelected; }
+            set
+            {
+                if(_itemSelected != value)
+                {
+                    value.CommandClick?.Invoke();
+                }
+                SetProperty(ref _itemSelected, value);
+            }
+        }
+
+
         private string _accountImage;
 
         public string AccountImage
@@ -92,7 +110,6 @@ namespace GitAll.Core.ViewModels
             RepositoryList.Clear();
             RepositoryList.AddRange(
                 CoreApp.Get<RepositoryService>().AvialableRepositories(_accountSelected));            
-        }
-
+        }        
     }
 }

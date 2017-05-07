@@ -294,10 +294,11 @@ namespace GitAll.Core.I18NPortable
                     ? _translations[key]
                     : string.Format(_translations[key], args);
 
-            if (_throwWhenKeyNotFound)
+            
+            if (_throwWhenKeyNotFound)                                
                 throw new KeyNotFoundException(
                     $"[{nameof(I18N)}] key '{key}' not found in the current language '{_locale}'");
-
+            
             return $"{_notFoundSymbol}{key}{_notFoundSymbol}";
         }
 

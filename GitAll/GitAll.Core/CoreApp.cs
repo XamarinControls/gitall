@@ -19,11 +19,12 @@ namespace GitAll.Core
             Register<AppSettings>();
             Register<AccountService>();
             Register<RepositoryService>();
+            Register<MasterDetailActionsService>();
 
             I18N.Current
                 .SetNotFoundSymbol("$")
                 .SetFallbackLocale("en")
-                .SetThrowWhenKeyNotFound(true)
+                .SetThrowWhenKeyNotFound(false)
                 .SetLogger(text => Debug.WriteLine(text))
                 .Init(GetType().GetTypeInfo().Assembly);
         }

@@ -1,3 +1,4 @@
-﻿MainTitle = GitAll
+﻿
+MainTitle = GitAll
 NoRepository = No repository selected
 HeyYou = Aosdjoaijdaoidj

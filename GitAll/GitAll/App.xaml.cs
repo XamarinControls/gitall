@@ -22,9 +22,11 @@ namespace GitAll.Forms
 
             _coreApp = new CoreApp();
             _coreApp.Init(new MyDependencyService());
-                            
+                                        
             MainPage = new NavigationPage(new MainView());
         }
+
+        
 
         protected override void OnStart()
         {

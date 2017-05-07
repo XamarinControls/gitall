@@ -14,7 +14,7 @@ namespace GitAll.Forms.Services
 
         public void Register<T>() where T : class
         {
-            DependencyService.Register<T>();
+            DependencyService.Register<T>();            
         }
     }
 }

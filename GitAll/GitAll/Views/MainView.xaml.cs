@@ -12,6 +12,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Globalization;
 using GitAll.Core.ViewModels;
+using GitAll.Core;
+using GitAll.Core.Services;
 
 namespace GitAll.Forms.Views
 {
@@ -24,7 +26,28 @@ namespace GitAll.Forms.Views
             BindingContext = new MainViewModel();
 
             Master = new MasterView();
-            Detail = new ActivityView();                        
+            Detail = new ActivityView();
+
+            FeedNavigationActions();   
+        }
+
+        private void FeedNavigationActions()
+        {
+            var actionsMasterDetail = CoreApp.Get<MasterDetailActionsService>();
+
+            actionsMasterDetail["Activity"] = () => 
+            {
+                Detail = new ActivityView();
+                IsPresented = false;                                
+            };
+            actionsMasterDetail["Issues"] = () => 
+            {
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    Detail = new IssuesView();
+                    IsPresented = false;
+                });                
+            };
         }
     }
 
