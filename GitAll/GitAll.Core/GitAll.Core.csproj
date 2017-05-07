@@ -37,7 +37,15 @@
     <Compile Include="CoreApp.cs" />
     <Compile Include="Model\Account.cs" />
     <Compile Include="Model\MasterItemDetail.cs" />
-    <Compile Include="Model\Repository.cs" />
+    <Compile Include="Model\SourceControl\Base\SourceControlModel.cs" />
+    <Compile Include="Model\SourceControl\Comment.cs" />
+    <Compile Include="Model\SourceControl\Commit.cs" />
+    <Compile Include="Model\SourceControl\Label.cs" />
+    <Compile Include="Model\SourceControl\Milestone.cs" />
+    <Compile Include="Model\SourceControl\Repository.cs" />
+    <Compile Include="Model\SourceControl\Branch.cs" />
+    <Compile Include="Model\SourceControl\Issue.cs" />
+    <Compile Include="Model\SourceControl\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AccountService.cs" />
     <Compile Include="Services\MasterDetailActionsService.cs" />
@@ -51,9 +59,10 @@
     <Compile Include="Locales\Utils\II18N.cs" />
     <Compile Include="Locales\Utils\PortableLanguage.cs" />
     <Compile Include="Services\Interfaces\IMasterDetailMenuService.cs" />
-    <Compile Include="Services\Interfaces\IRepositoryService.cs" />
     <Compile Include="Services\MasterDetailMenuService.cs" />
-    <Compile Include="Services\RepositoryService.cs" />
+    <Compile Include="Services\SourceControlServices\Interfaces\ISourceControlManagerService.cs" />
+    <Compile Include="Services\SourceControlServices\Interfaces\ISourceControlService.cs" />
+    <Compile Include="Services\SourceControlServices\SourceControlManagerService.cs" />
     <Compile Include="Utils\ExtensionMethods.cs" />
     <Compile Include="ViewModels\ActivityViewModel.cs" />
     <Compile Include="ViewModels\Base\BaseViewModel.cs" />
@@ -65,7 +74,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Locales\en.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Services\SourceControlServices\GitLab\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

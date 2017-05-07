@@ -1,5 +1,7 @@
 ﻿using GitAll.Core.Model;
+using GitAll.Core.Model.SourceControl;
 using GitAll.Core.Services;
+using GitAll.Core.Services.SourceControlServices;
 using GitAll.Core.Utils;
 using GitAll.Core.ViewModels.Base;
 using System.Collections.ObjectModel;
@@ -17,7 +19,7 @@ namespace GitAll.Core.ViewModels
             AccountList = new ObservableCollection<Account>(
                 CoreApp.Get<AccountService>().AvialableAccounts());
 
-            RepositoryList = new ObservableCollection<Repository>();
+            ProjectList = new ObservableCollection<Project>();
         }
 
 
@@ -86,17 +88,17 @@ namespace GitAll.Core.ViewModels
         }
 
 
-        private ObservableCollection<Repository> _repositoryList;
+        private ObservableCollection<Project> _projectList;
 
-        public ObservableCollection<Repository> RepositoryList
+        public ObservableCollection<Project> ProjectList
         {
-            get { return _repositoryList; }
-            set { SetProperty(ref _repositoryList, value); }
+            get { return _projectList; }
+            set { SetProperty(ref _projectList, value); }
         }
 
-        private Repository _repositorySelected;
+        private Project _repositorySelected;
 
-        public Repository RepositorySelected
+        public Project RepositorySelected
         {
             get { return _repositorySelected; }
             set
@@ -105,11 +107,12 @@ namespace GitAll.Core.ViewModels
             }
         }
 
-        private void RefillRepository()
+        private async void RefillRepository()
         {
-            RepositoryList.Clear();
-            RepositoryList.AddRange(
-                CoreApp.Get<RepositoryService>().AvialableRepositories(_accountSelected));            
+            ProjectList.Clear();
+            
+            ProjectList.AddRange(
+                await CoreApp.Get<SourceControlManagerService>().AvialableProjects(_accountSelected));            
         }        
     }
 }

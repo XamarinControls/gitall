@@ -3,6 +3,7 @@ using GitAll.Core.Services.Interfaces;
 using GitAll.Core.I18NPortable;
 using System.Diagnostics;
 using GitAll.Core.Services;
+using GitAll.Core.Services.SourceControlServices;
 
 namespace GitAll.Core
 {
@@ -18,7 +19,7 @@ namespace GitAll.Core
             Register<MasterDetailMenuService>();
             Register<AppSettings>();
             Register<AccountService>();
-            Register<RepositoryService>();
+            Register<SourceControlManagerService>();
             Register<MasterDetailActionsService>();
 
             I18N.Current

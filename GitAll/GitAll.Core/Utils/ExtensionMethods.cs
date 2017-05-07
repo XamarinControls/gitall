@@ -38,5 +38,13 @@ namespace GitAll.Core.Utils
                 collection.Add(element);
             }
         }
+
+        public static void AddRange<T>(this ObservableCollection<T> collection, List<T> elements)
+        {
+            foreach(var element in elements)
+            {
+                collection.Add(element);
+            }
+        }
     }
 }
